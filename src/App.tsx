@@ -7,6 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Dashboard } from "./pages/Dashboard";
 import { ProjectsPage } from "./pages/ProjectsPage";
+import { ExecutionPage } from "./pages/ExecutionPage";
+import { RealEstatePage } from "./pages/RealEstatePage";
+import { FinancePage } from "./pages/FinancePage";
+import { AdminPage } from "./pages/AdminPage";
+import { LegalPage } from "./pages/LegalPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,11 +26,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/execution" element={<div className="text-center p-8"><h2 className="text-2xl font-bold">قطاع التنفيذ</h2><p>قريباً...</p></div>} />
-            <Route path="/real-estate" element={<div className="text-center p-8"><h2 className="text-2xl font-bold">القطاع العقاري</h2><p>قريباً...</p></div>} />
-            <Route path="/finance" element={<div className="text-center p-8"><h2 className="text-2xl font-bold">القطاع المالي</h2><p>قريباً...</p></div>} />
-            <Route path="/admin" element={<div className="text-center p-8"><h2 className="text-2xl font-bold">الشئون الإدارية</h2><p>قريباً...</p></div>} />
-            <Route path="/legal" element={<div className="text-center p-8"><h2 className="text-2xl font-bold">القطاع القانوني</h2><p>قريباً...</p></div>} />
+            <Route path="/execution" element={<ExecutionPage />} />
+            <Route path="/real-estate" element={<RealEstatePage />} />
+            <Route path="/finance" element={<FinancePage />} />
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/legal" element={<LegalPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
