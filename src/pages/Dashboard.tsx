@@ -4,6 +4,8 @@ import { StatCard } from '../components/StatCard';
 import { TaskManager } from '../components/TaskManager';
 import { ProjectChart } from '../components/ProjectChart';
 import { AlertsPanel } from '../components/AlertsPanel';
+import { DashboardCharts } from '../components/DashboardCharts';
+import { SectorReportsPanel } from '../components/SectorReportsPanel';
 import { 
   Building, 
   Users, 
@@ -62,6 +64,12 @@ export const Dashboard = () => {
           color="from-erp-purple to-erp-purple-light"
         />
       </div>
+
+      {/* مفاتيح التقارير القطاعية */}
+      <SectorReportsPanel />
+
+      {/* المخططات البيانية التفاعلية */}
+      <DashboardCharts />
 
       {/* إحصائيات تفصيلية لكل قطاع */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
