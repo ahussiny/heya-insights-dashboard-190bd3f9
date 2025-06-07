@@ -12,6 +12,7 @@ import { RealEstatePage } from "./pages/RealEstatePage";
 import { FinancePage } from "./pages/FinancePage";
 import { AdminPage } from "./pages/AdminPage";
 import { LegalPage } from "./pages/LegalPage";
+import { CooperationPage } from "./pages/CooperationPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/finance" element={<FinancePage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/legal" element={<LegalPage />} />
+            <Route path="/cooperation" element={<CooperationPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

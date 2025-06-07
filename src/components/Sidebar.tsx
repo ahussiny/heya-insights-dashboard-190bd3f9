@@ -11,7 +11,8 @@ import {
   Scale,
   DollarSign,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Handshake
 } from 'lucide-react';
 
 export const Sidebar = () => {
@@ -26,6 +27,7 @@ export const Sidebar = () => {
     { icon: DollarSign, label: 'القطاع المالي', path: '/finance' },
     { icon: Users, label: 'الشئون الإدارية', path: '/admin' },
     { icon: Scale, label: 'القطاع القانوني', path: '/legal' },
+    { icon: Handshake, label: 'قطاع التعاون', path: '/cooperation' },
   ];
 
   return (
