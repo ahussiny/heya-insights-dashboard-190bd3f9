@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { AlertTriangle, Clock, Bell, ExclamationTriangle } from 'lucide-react';
+import { AlertTriangle, Clock, Bell } from 'lucide-react';
 
 export const AlertsPanel = () => {
   const alerts = [
@@ -41,7 +41,7 @@ export const AlertsPanel = () => {
   const getAlertIcon = (type: string) => {
     switch (type) {
       case 'urgent':
-        return <ExclamationTriangle className="text-red-500" size={20} />;
+        return <AlertTriangle className="text-red-500" size={20} />;
       case 'overdue':
         return <AlertTriangle className="text-red-600" size={20} />;
       case 'warning':
