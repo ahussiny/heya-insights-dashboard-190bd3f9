@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { LegalReports } from '../components/reports/LegalReports';
+import { LegalChart } from '../components/charts/LegalChart';
 import { Scale, FileText, AlertTriangle, CheckCircle } from 'lucide-react';
 
 export const LegalPage = () => {
@@ -45,6 +46,10 @@ export const LegalPage = () => {
           color="from-erp-red to-erp-red-light"
         />
       </div>
+
+      <LegalReports />
+      
+      <LegalChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">القضايا والعقود</h3>

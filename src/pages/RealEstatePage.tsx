@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { RealEstateReports } from '../components/reports/RealEstateReports';
+import { RealEstateChart } from '../components/charts/RealEstateChart';
 import { Building, Users, TrendingUp, Home } from 'lucide-react';
 
 export const RealEstatePage = () => {
@@ -45,6 +46,10 @@ export const RealEstatePage = () => {
           color="from-erp-purple to-erp-purple-light"
         />
       </div>
+
+      <RealEstateReports />
+      
+      <RealEstateChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">المبيعات الحديثة</h3>

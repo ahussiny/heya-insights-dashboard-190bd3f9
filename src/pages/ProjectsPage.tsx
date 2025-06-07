@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { ProjectsReports } from '../components/reports/ProjectsReports';
+import { ProjectsChart } from '../components/charts/ProjectsChart';
 import { FolderOpen, Calculator, TrendingUp, Clock } from 'lucide-react';
 
 export const ProjectsPage = () => {
@@ -45,6 +46,10 @@ export const ProjectsPage = () => {
           color="from-erp-red to-erp-red-light"
         />
       </div>
+
+      <ProjectsReports />
+      
+      <ProjectsChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">المشاريع الحالية</h3>

@@ -16,6 +16,11 @@ export const Header = () => {
     <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
+          <img 
+            src="/lovable-uploads/2afaecf2-ca8f-4cad-9518-80c17aa49952.png" 
+            alt="شعار الهيئة" 
+            className="h-12 w-12 object-contain"
+          />
           <h2 className="text-xl font-semibold text-gray-800">لوحة التحكم</h2>
         </div>
         

@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { FinanceReports } from '../components/reports/FinanceReports';
+import { FinanceChart } from '../components/charts/FinanceChart';
 import { DollarSign, CreditCard, TrendingUp, AlertCircle } from 'lucide-react';
 
 export const FinancePage = () => {
@@ -45,6 +46,10 @@ export const FinancePage = () => {
           color="from-erp-red to-erp-red-light"
         />
       </div>
+
+      <FinanceReports />
+      
+      <FinanceChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">العمليات المالية الحديثة</h3>

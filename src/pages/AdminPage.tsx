@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { AdminReports } from '../components/reports/AdminReports';
+import { AdminChart } from '../components/charts/AdminChart';
 import { Users, Clock, TrendingUp, Award } from 'lucide-react';
 
 export const AdminPage = () => {
@@ -45,6 +46,10 @@ export const AdminPage = () => {
           color="from-erp-purple to-erp-purple-light"
         />
       </div>
+
+      <AdminReports />
+      
+      <AdminChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">تقارير الموظفين</h3>

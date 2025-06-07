@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { ExecutionReports } from '../components/reports/ExecutionReports';
+import { ExecutionChart } from '../components/charts/ExecutionChart';
 import { Settings, CheckCircle, Clock, AlertTriangle } from 'lucide-react';
 
 export const ExecutionPage = () => {
@@ -45,6 +46,10 @@ export const ExecutionPage = () => {
           color="from-erp-red to-erp-red-light"
         />
       </div>
+
+      <ExecutionReports />
+      
+      <ExecutionChart />
 
       <div className="bg-white rounded-xl shadow-md p-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">المستخلصات الحديثة</h3>

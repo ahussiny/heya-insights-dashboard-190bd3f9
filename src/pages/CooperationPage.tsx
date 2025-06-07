@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
+import { CooperationReports } from '../components/reports/CooperationReports';
+import { CooperationChart } from '../components/charts/CooperationChart';
 import { Users, Building, MapPin, DollarSign } from 'lucide-react';
 
 export const CooperationPage = () => {
@@ -45,6 +46,10 @@ export const CooperationPage = () => {
           color="from-erp-purple to-erp-purple-light"
         />
       </div>
+
+      <CooperationReports />
+      
+      <CooperationChart />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl shadow-md p-6">
