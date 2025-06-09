@@ -35,7 +35,7 @@ export const LoginPage = () => {
               className="h-16 w-16 object-contain"
             />
           </div>
-          <CardTitle className="text-2xl font-bold text-erp-blue">نظام ERP</CardTitle>
+          <CardTitle className="text-2xl font-bold text-erp-blue">الهيئة العامة لتعاونيات البناء والاسكان</CardTitle>
           <CardDescription>تسجيل الدخول إلى النظام</CardDescription>
         </CardHeader>
         <CardContent>

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, BarChart3 } from 'lucide-react';
@@ -16,8 +17,10 @@ const associationLandsReports = [
 ];
 
 export const AssociationLandsReports = () => {
+  const navigate = useNavigate();
+
   const handleReportClick = (reportName: string) => {
-    console.log(`فتح تقرير: ${reportName} من قسم أراضي الجمعيات`);
+    navigate(`/report?name=${encodeURIComponent(reportName)}&sector=${encodeURIComponent('أراضي الجمعيات')}`);
   };
 
   return (

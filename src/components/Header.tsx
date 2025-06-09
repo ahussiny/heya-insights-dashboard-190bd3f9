@@ -21,7 +21,7 @@ export const Header = () => {
             alt="شعار الهيئة" 
             className="h-12 w-12 object-contain"
           />
-          <h2 className="text-xl font-semibold text-gray-800">لوحة التحكم</h2>
+          <h2 className="text-xl font-semibold text-gray-800">الهيئة العامة لتعاونيات البناء والاسكان</h2>
         </div>
         
         <div className="flex items-center space-x-4">
