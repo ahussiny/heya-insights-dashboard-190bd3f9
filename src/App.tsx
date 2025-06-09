@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { LoginPage } from "./components/LoginPage";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { ReportView } from "./components/ReportView";
 import { Dashboard } from "./pages/Dashboard";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ExecutionPage } from "./pages/ExecutionPage";
@@ -32,6 +33,13 @@ const App = () => (
             <ProtectedRoute>
               <Layout>
                 <Dashboard />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/report" element={
+            <ProtectedRoute>
+              <Layout>
+                <ReportView />
               </Layout>
             </ProtectedRoute>
           } />
