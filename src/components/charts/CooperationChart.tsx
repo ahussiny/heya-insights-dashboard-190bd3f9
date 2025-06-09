@@ -20,9 +20,9 @@ const paymentStatus = [
 ];
 
 const societyTypes = [
-  { name: 'إسكانية', count: 12, revenue: 45.2 },
-  { name: 'تجارية', count: 8, revenue: 32.8 },
-  { name: 'خدمية', count: 4, revenue: 15.5 }
+  { name: 'فئوية', count: 12, revenue: 35.2 },
+  { name: 'إقليمية', count: 10, revenue: 42.8 },
+  { name: 'فئوية وإقليمية', count: 2, revenue: 7.5 }
 ];
 
 const landAllocation = [

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { StatCard } from '../components/StatCard';
 import { CooperationReports } from '../components/reports/CooperationReports';
@@ -59,6 +60,7 @@ export const CooperationPage = () => {
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-right py-3 px-4 font-semibold text-gray-700">اسم الجمعية</th>
+                  <th className="text-right py-3 px-4 font-semibold text-gray-700">النوع</th>
                   <th className="text-right py-3 px-4 font-semibold text-gray-700">عدد الأعضاء</th>
                   <th className="text-right py-3 px-4 font-semibold text-gray-700">المشاريع النشطة</th>
                   <th className="text-right py-3 px-4 font-semibold text-gray-700">الحالة</th>
@@ -66,13 +68,22 @@ export const CooperationPage = () => {
               </thead>
               <tbody>
                 {[
-                  { name: 'جمعية الأندلس التعاونية', members: 85, projects: 3, status: 'نشطة' },
-                  { name: 'جمعية النور الإسكانية', members: 120, projects: 2, status: 'نشطة' },
-                  { name: 'جمعية الياسمين', members: 65, projects: 1, status: 'معلقة' },
-                  { name: 'جمعية الورود التعاونية', members: 95, projects: 4, status: 'نشطة' },
+                  { name: 'جمعية الأندلس الفئوية', type: 'فئوية', members: 85, projects: 3, status: 'نشطة' },
+                  { name: 'جمعية النور الإقليمية', type: 'إقليمية', members: 120, projects: 2, status: 'نشطة' },
+                  { name: 'جمعية الياسمين المختلطة', type: 'فئوية وإقليمية', members: 65, projects: 1, status: 'معلقة' },
+                  { name: 'جمعية الورود الإقليمية', type: 'إقليمية', members: 95, projects: 4, status: 'نشطة' },
                 ].map((society, index) => (
                   <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-3 px-4 font-medium">{society.name}</td>
+                    <td className="py-3 px-4">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        society.type === 'فئوية' ? 'bg-blue-100 text-blue-600' :
+                        society.type === 'إقليمية' ? 'bg-purple-100 text-purple-600' :
+                        'bg-indigo-100 text-indigo-600'
+                      }`}>
+                        {society.type}
+                      </span>
+                    </td>
                     <td className="py-3 px-4">{society.members}</td>
                     <td className="py-3 px-4">{society.projects}</td>
                     <td className="py-3 px-4">
