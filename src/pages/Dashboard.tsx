@@ -16,7 +16,8 @@ import {
   Clock,
   Scale,
   Handshake,
-  Home
+  Home,
+  MapPin
 } from 'lucide-react';
 
 export const Dashboard = () => {
@@ -46,19 +47,19 @@ export const Dashboard = () => {
           color="from-erp-green to-erp-green-light"
         />
         <StatCard
+          title="الأراضي المباعة"
+          value="62"
+          change="15%"
+          changeType="increase"
+          icon={MapPin}
+          color="from-erp-orange to-erp-orange-light"
+        />
+        <StatCard
           title="إجمالي الإيرادات"
           value="25.4 مليون"
           change="15%"
           changeType="increase"
           icon={DollarSign}
-          color="from-erp-orange to-erp-orange-light"
-        />
-        <StatCard
-          title="عدد الموظفين"
-          value="127"
-          change="3%"
-          changeType="increase"
-          icon={Users}
           color="from-erp-purple to-erp-purple-light"
         />
       </div>
@@ -159,7 +160,7 @@ export const Dashboard = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-6">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">ملخص العقارات</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-4">ملخص العقارات والأراضي</h3>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-600">الوحدات المطروحة</span>
@@ -170,8 +171,8 @@ export const Dashboard = () => {
               <span className="font-semibold text-green-600">145</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">الوحدات المتبقية</span>
-              <span className="font-semibold text-orange-600">89</span>
+              <span className="text-sm text-gray-600">الأراضي المباعة</span>
+              <span className="font-semibold text-orange-600">62</span>
             </div>
           </div>
         </div>
