@@ -12,7 +12,8 @@ import {
   DollarSign,
   ChevronLeft,
   ChevronRight,
-  Handshake
+  Handshake,
+  MapPin
 } from 'lucide-react';
 
 export const Sidebar = () => {
@@ -28,6 +29,7 @@ export const Sidebar = () => {
     { icon: Users, label: 'الشئون الإدارية', path: '/admin' },
     { icon: Scale, label: 'القطاع القانوني', path: '/legal' },
     { icon: Handshake, label: 'قطاع التعاون', path: '/cooperation' },
+    { icon: MapPin, label: 'أراضي الجمعيات', path: '/association-lands' },
   ];
 
   return (

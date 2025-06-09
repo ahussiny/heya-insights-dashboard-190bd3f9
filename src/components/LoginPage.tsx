@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Building } from 'lucide-react';
 
 export const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -30,7 +29,11 @@ export const LoginPage = () => {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
-            <Building className="h-12 w-12 text-erp-blue" />
+            <img 
+              src="/lovable-uploads/2afaecf2-ca8f-4cad-9518-80c17aa49952.png" 
+              alt="شعار الهيئة" 
+              className="h-16 w-16 object-contain"
+            />
           </div>
           <CardTitle className="text-2xl font-bold text-erp-blue">نظام ERP</CardTitle>
           <CardDescription>تسجيل الدخول إلى النظام</CardDescription>
