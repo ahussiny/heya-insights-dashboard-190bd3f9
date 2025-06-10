@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -167,20 +166,20 @@ export const ReportView = () => {
                 <TableRow key={index}>
                   {Object.values(item).map((value, cellIndex) => (
                     <TableCell key={cellIndex} className={cellIndex === 0 ? "font-medium" : ""}>
-                      {typeof value === 'string' && (value === 'مكتمل' || value === 'مباعة' || value === 'نشطة' || value === 'محلولة' || value === 'معتمد') ? (
+                      {String(value) === 'مكتمل' || String(value) === 'مباعة' || String(value) === 'نشطة' || String(value) === 'محلولة' || String(value) === 'معتمد' ? (
                         <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                          {value}
+                          {String(value)}
                         </span>
-                      ) : typeof value === 'string' && (value === 'قيد التنفيذ' || value === 'محجوزة' || value === 'مراجعة' || value === 'قيد النظر' || value === 'متاحة') ? (
+                      ) : String(value) === 'قيد التنفيذ' || String(value) === 'محجوزة' || String(value) === 'مراجعة' || String(value) === 'قيد النظر' || String(value) === 'متاحة' ? (
                         <span className="px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                          {value}
+                          {String(value)}
                         </span>
-                      ) : typeof value === 'string' && (value === 'مؤجل' || value === 'معلقة' || value === 'متأخر') ? (
+                      ) : String(value) === 'مؤجل' || String(value) === 'معلقة' || String(value) === 'متأخر' ? (
                         <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                          {value}
+                          {String(value)}
                         </span>
                       ) : (
-                        value
+                        String(value)
                       )}
                     </TableCell>
                   ))}
