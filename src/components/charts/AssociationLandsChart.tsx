@@ -86,7 +86,7 @@ export const AssociationLandsChart = () => {
 
       <Card className="lg:col-span-2">
         <CardHeader>
-          <CardTitle>التحصيل المالي مقابل المستهدف</CardTitle>
+          <CardTitle>التحصيل المالي مقابل المستهدف (مليون جنيه)</CardTitle>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="h-[300px] w-full">
@@ -95,8 +95,8 @@ export const AssociationLandsChart = () => {
               <XAxis dataKey="month" />
               <YAxis />
               <ChartTooltip content={<ChartTooltipContent />} />
-              <Line type="monotone" dataKey="collected" stroke="#10b981" name="المحصل (مليون ريال)" strokeWidth={2} />
-              <Line type="monotone" dataKey="target" stroke="#ef4444" name="المستهدف (مليون ريال)" strokeWidth={2} strokeDasharray="5 5" />
+              <Line type="monotone" dataKey="collected" stroke="#10b981" name="المحصل (مليون جنيه)" strokeWidth={2} />
+              <Line type="monotone" dataKey="target" stroke="#ef4444" name="المستهدف (مليون جنيه)" strokeWidth={2} strokeDasharray="5 5" />
             </LineChart>
           </ChartContainer>
         </CardContent>

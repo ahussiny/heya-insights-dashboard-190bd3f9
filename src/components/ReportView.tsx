@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -53,11 +54,33 @@ const getReportData = (reportName: string, sector: string) => {
       { id: 'SOC004', name: 'جمعية الورود الإقليمية', type: 'إقليمية', region: 'أسوان', members: '95', activeProjects: '4', totalLands: '30 قطعة', status: 'نشطة' },
     ],
 
+    // تقارير أراضي الجمعيات
+    'أراضي الجمعيات-تقرير الأراضي الممنوحة': [
+      { id: 'L001', plot: 'ق-001', area: '5000 م²', association: 'جمعية الأندلس', grantDate: '2023-01-15', value: '2,500,000 جنيه', status: 'مكتملة', phase: 'التقسيم' },
+      { id: 'L002', plot: 'ق-002', area: '7500 م²', association: 'جمعية النور', grantDate: '2023-02-20', value: '3,750,000 جنيه', status: 'قيد التنفيذ', phase: 'البناء' },
+      { id: 'L003', plot: 'ق-003', area: '4200 م²', association: 'جمعية الخير', grantDate: '2023-03-10', value: '2,100,000 جنيه', status: 'مكتملة', phase: 'مكتمل' },
+    ],
+    'أراضي الجمعيات-تقرير التقسيمات': [
+      { id: 'D001', plot: 'ق-001', totalArea: '5000 م²', dividedUnits: '25 وحدة', unitArea: '200 م²', unitPrice: '100,000 جنيه', completionRate: '100%', approvalStatus: 'معتمد' },
+      { id: 'D002', plot: 'ق-002', totalArea: '7500 م²', dividedUnits: '30 وحدة', unitArea: '250 م²', unitPrice: '125,000 جنيه', completionRate: '75%', approvalStatus: 'قيد المراجعة' },
+      { id: 'D003', plot: 'ق-004', totalArea: '6800 م²', dividedUnits: '34 وحدة', unitArea: '200 م²', unitPrice: '95,000 جنيه', completionRate: '85%', approvalStatus: 'معتمد' },
+    ],
+    'أراضي الجمعيات-تقرير العقود والبيع': [
+      { id: 'C001', contract: 'ع-001', association: 'جمعية الأمل', value: '2,500,000 جنيه', collected: '2,000,000 جنيه', remaining: '500,000 جنيه', status: 'منتظم', dueDate: '2024-12-31' },
+      { id: 'C002', contract: 'ع-002', association: 'جمعية النور', value: '3,750,000 جنيه', collected: '1,500,000 جنيه', remaining: '2,250,000 جنيه', status: 'منتظم', dueDate: '2025-06-30' },
+      { id: 'C003', contract: 'ع-003', association: 'جمعية الخير', value: '2,100,000 جنيه', collected: '2,100,000 جنيه', remaining: '0 جنيه', status: 'مكتمل', dueDate: '2024-04-30' },
+    ],
+
     // تقارير القطاع المالي
     'القطاع المالي-تقرير التحصيلات': [
       { id: 'COL001', source: 'مبيعات الوحدات', amount: '2,500,000 جنيه', collectedAmount: '2,200,000 جنيه', pendingAmount: '300,000 جنيه', collectionRate: '88%', month: 'مايو 2024' },
       { id: 'COL002', source: 'مبيعات الأراضي', amount: '1,800,000 جنيه', collectedAmount: '1,650,000 جنيه', pendingAmount: '150,000 جنيه', collectionRate: '92%', month: 'مايو 2024' },
       { id: 'COL003', source: 'رسوم الجمعيات', amount: '450,000 جنيه', collectedAmount: '400,000 جنيه', pendingAmount: '50,000 جنيه', collectionRate: '89%', month: 'مايو 2024' },
+    ],
+    'القطاع المالي-تقرير الأقساط': [
+      { id: 'INS001', client: 'أحمد محمد علي', totalAmount: '500,000 جنيه', installmentAmount: '25,000 جنيه', paidInstallments: '8', remainingInstallments: '12', nextDue: '2024-07-01', status: 'منتظم' },
+      { id: 'INS002', client: 'فاطمة أحمد سالم', totalAmount: '750,000 جنيه', installmentAmount: '30,000 جنيه', paidInstallments: '15', remainingInstallments: '10', nextDue: '2024-07-15', status: 'منتظم' },
+      { id: 'INS003', client: 'محمد عبدالله سعيد', totalAmount: '400,000 جنيه', installmentAmount: '20,000 جنيه', paidInstallments: '12', remainingInstallments: '8', nextDue: '2024-06-25', status: 'متأخر' },
     ],
 
     // تقارير القطاع القانوني
@@ -95,7 +118,11 @@ const getTableHeaders = (reportName: string, sector: string) => {
     'الشؤون الإدارية-تقرير الحضور': ['رقم الموظف', 'اسم الموظف', 'القسم', 'الحضور', 'الغياب', 'التأخير', 'الإضافي', 'الشهر'],
     'الشؤون الإدارية-تقرير الرواتب': ['رقم الراتب', 'الموظف', 'المنصب', 'الراتب الأساسي', 'البدلات', 'الخصومات', 'صافي الراتب', 'الشهر'],
     'قطاع التعاون-تقرير الجمعيات': ['رقم الجمعية', 'اسم الجمعية', 'النوع', 'المنطقة', 'عدد الأعضاء', 'المشاريع النشطة', 'إجمالي الأراضي', 'الحالة'],
+    'أراضي الجمعيات-تقرير الأراضي الممنوحة': ['رقم الأرض', 'رقم القطعة', 'المساحة', 'الجمعية المستفيدة', 'تاريخ المنح', 'القيمة', 'الحالة', 'المرحلة'],
+    'أراضي الجمعيات-تقرير التقسيمات': ['رقم التقسيم', 'رقم القطعة', 'إجمالي المساحة', 'الوحدات المقسمة', 'مساحة الوحدة', 'سعر الوحدة', 'نسبة الإنجاز', 'حالة الاعتماد'],
+    'أراضي الجمعيات-تقرير العقود والبيع': ['رقم العقد', 'رقم العقد', 'الجمعية', 'قيمة العقد', 'المبلغ المحصل', 'المتبقي', 'الحالة', 'تاريخ الاستحقاق'],
     'القطاع المالي-تقرير التحصيلات': ['رقم التحصيل', 'مصدر الإيراد', 'المبلغ المستحق', 'المبلغ المحصل', 'المبلغ المعلق', 'نسبة التحصيل', 'الشهر'],
+    'القطاع المالي-تقرير الأقساط': ['رقم القسط', 'العميل', 'إجمالي المبلغ', 'قيمة القسط', 'الأقساط المسددة', 'الأقساط المتبقية', 'تاريخ الاستحقاق', 'الحالة'],
     'القطاع القانوني-تقرير القضايا': ['رقم القضية', 'نوع القضية', 'الطرف الآخر', 'المبلغ', 'الحالة', 'المحكمة', 'التاريخ'],
     'قطاع المشروعات-تقرير حالة المشاريع': ['رقم المشروع', 'اسم المشروع', 'المقاول', 'نسبة الإنجاز', 'الميزانية', 'المصروف', 'الحالة', 'تاريخ الانتهاء المتوقع'],
     'default': ['الرقم', 'الاسم', 'القيمة', 'الحالة', 'التاريخ']
@@ -166,11 +193,11 @@ export const ReportView = () => {
                 <TableRow key={index}>
                   {Object.values(item).map((value, cellIndex) => (
                     <TableCell key={cellIndex} className={cellIndex === 0 ? "font-medium" : ""}>
-                      {String(value) === 'مكتمل' || String(value) === 'مباعة' || String(value) === 'نشطة' || String(value) === 'محلولة' || String(value) === 'معتمد' ? (
+                      {String(value) === 'مكتمل' || String(value) === 'مباعة' || String(value) === 'نشطة' || String(value) === 'محلولة' || String(value) === 'معتمد' || String(value) === 'منتظم' || String(value) === 'مكتملة' ? (
                         <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                           {String(value)}
                         </span>
-                      ) : String(value) === 'قيد التنفيذ' || String(value) === 'محجوزة' || String(value) === 'مراجعة' || String(value) === 'قيد النظر' || String(value) === 'متاحة' ? (
+                      ) : String(value) === 'قيد التنفيذ' || String(value) === 'محجوزة' || String(value) === 'مراجعة' || String(value) === 'قيد النظر' || String(value) === 'متاحة' || String(value) === 'قيد المراجعة' ? (
                         <span className="px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
                           {String(value)}
                         </span>
@@ -191,7 +218,7 @@ export const ReportView = () => {
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <h4 className="font-semibold text-gray-900 mb-2">ملاحظات التقرير:</h4>
             <p className="text-gray-600 text-sm">
-              هذا تقرير {reportName} الخاص بـ{sector}. البيانات المعروضة تعكس الوضع الحالي للقطاع وتحديثاتها تتم بشكل دوري.
+              هذا تقرير {reportName} الخاص بـ{sector}. البيانات المعروضة تعكس الوضع الحالي للقطاع وتحديثاتها تتم بشكل دوري. جميع المبالغ مدرجة بالجنيه المصري.
             </p>
           </div>
         </CardContent>

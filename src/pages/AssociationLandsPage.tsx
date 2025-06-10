@@ -51,7 +51,7 @@ export const AssociationLandsPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="قيمة البيع"
-          value="45.2 مليون"
+          value="45.2 مليون جنيه"
           change="22%"
           changeType="increase"
           icon={DollarSign}
@@ -170,9 +170,9 @@ export const AssociationLandsPage = () => {
                 <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                   <td className="py-3 px-4 font-medium">{contract.contract}</td>
                   <td className="py-3 px-4">{contract.association}</td>
-                  <td className="py-3 px-4">{contract.value} ريال</td>
-                  <td className="py-3 px-4">{contract.collected} ريال</td>
-                  <td className="py-3 px-4">{contract.remaining} ريال</td>
+                  <td className="py-3 px-4">{contract.value} جنيه</td>
+                  <td className="py-3 px-4">{contract.collected} جنيه</td>
+                  <td className="py-3 px-4">{contract.remaining} جنيه</td>
                   <td className="py-3 px-4">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       contract.status === 'مكتمل' ? 'bg-green-100 text-green-600' :
