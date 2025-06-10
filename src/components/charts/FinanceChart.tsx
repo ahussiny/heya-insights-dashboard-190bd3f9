@@ -42,7 +42,7 @@ export const FinanceChart = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <Card>
         <CardHeader>
-          <CardTitle>التحصيلات الشهرية</CardTitle>
+          <CardTitle>التحصيلات الشهرية (مليون جنيه)</CardTitle>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="h-[300px] w-full">
@@ -56,7 +56,7 @@ export const FinanceChart = () => {
                 dataKey="collected" 
                 stroke="#10b981"
                 strokeWidth={3}
-                name="المحصل (مليون ريال)"
+                name="المحصل (مليون جنيه)"
               />
             </LineChart>
           </ChartContainer>
@@ -83,7 +83,7 @@ export const FinanceChart = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>الإيرادات مقابل الأهداف</CardTitle>
+          <CardTitle>الإيرادات مقابل الأهداف (مليون جنيه)</CardTitle>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="h-[300px] w-full">

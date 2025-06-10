@@ -18,19 +18,19 @@ const getReportData = (reportName: string, sector: string) => {
   const reportDataMap = {
     // تقارير القطاع العقاري
     'القطاع العقاري-تقرير مبيعات الوحدات': [
-      { id: 'U001', name: 'وحدة الأندلس A1', type: 'شقة', area: '120 م²', price: '85,000', status: 'مباعة', buyer: 'أحمد محمد علي', date: '2024-05-15' },
-      { id: 'U002', name: 'وحدة النور B2', type: 'فيلا', area: '250 م²', price: '150,000', status: 'مباعة', buyer: 'فاطمة أحمد سالم', date: '2024-05-20' },
-      { id: 'U003', name: 'وحدة الياسمين C3', type: 'شقة', area: '100 م²', price: '70,000', status: 'محجوزة', buyer: 'محمد عبدالله', date: '2024-05-25' },
+      { id: 'U001', name: 'وحدة الأندلس A1', type: 'شقة', area: '120 م²', price: '85,000 جنيه', status: 'مباعة', buyer: 'أحمد محمد علي', date: '2024-05-15' },
+      { id: 'U002', name: 'وحدة النور B2', type: 'فيلا', area: '250 م²', price: '150,000 جنيه', status: 'مباعة', buyer: 'فاطمة أحمد سالم', date: '2024-05-20' },
+      { id: 'U003', name: 'وحدة الياسمين C3', type: 'شقة', area: '100 م²', price: '70,000 جنيه', status: 'محجوزة', buyer: 'محمد عبدالله', date: '2024-05-25' },
     ],
     'القطاع العقاري-تقرير الوحدات المتاحة': [
-      { id: 'U004', name: 'وحدة الورود D4', type: 'شقة', area: '110 م²', price: '75,000', status: 'متاحة', location: 'المجمع الأول', phase: 'المرحلة الثانية' },
-      { id: 'U005', name: 'وحدة السلام E5', type: 'فيلا', area: '300 م²', price: '180,000', status: 'متاحة', location: 'المجمع الثاني', phase: 'المرحلة الأولى' },
-      { id: 'U006', name: 'وحدة الأمل F6', type: 'دوبلكس', area: '180 م²', price: '120,000', status: 'قيد الإنشاء', location: 'المجمع الثالث', phase: 'المرحلة الثالثة' },
+      { id: 'U004', name: 'وحدة الورود D4', type: 'شقة', area: '110 م²', price: '75,000 جنيه', status: 'متاحة', location: 'المجمع الأول', phase: 'المرحلة الثانية' },
+      { id: 'U005', name: 'وحدة السلام E5', type: 'فيلا', area: '300 م²', price: '180,000 جنيه', status: 'متاحة', location: 'المجمع الثاني', phase: 'المرحلة الأولى' },
+      { id: 'U006', name: 'وحدة الأمل F6', type: 'دوبلكس', area: '180 م²', price: '120,000 جنيه', status: 'قيد الإنشاء', location: 'المجمع الثالث', phase: 'المرحلة الثالثة' },
     ],
     'القطاع العقاري-تقرير مبيعات الأراضي': [
-      { id: 'L001', name: 'قطعة رقم 15', area: '500 م²', price: '50,000', status: 'مباعة', buyer: 'سالم أحمد محمد', paymentType: 'نقدي', date: '2024-04-10' },
-      { id: 'L002', name: 'قطعة رقم 28', area: '750 م²', price: '75,000', status: 'مباعة', buyer: 'عائشة علي سالم', paymentType: 'أقساط', date: '2024-04-15' },
-      { id: 'L003', name: 'قطعة رقم 42', area: '600 م²', price: '60,000', status: 'محجوزة', buyer: 'خالد محمد عبدالله', paymentType: 'أقساط', date: '2024-04-20' },
+      { id: 'L001', name: 'قطعة رقم 15', area: '500 م²', price: '50,000 جنيه', status: 'مباعة', buyer: 'سالم أحمد محمد', paymentType: 'نقدي', date: '2024-04-10' },
+      { id: 'L002', name: 'قطعة رقم 28', area: '750 م²', price: '75,000 جنيه', status: 'مباعة', buyer: 'عائشة علي سالم', paymentType: 'أقساط', date: '2024-04-15' },
+      { id: 'L003', name: 'قطعة رقم 42', area: '600 م²', price: '60,000 جنيه', status: 'محجوزة', buyer: 'خالد محمد عبدالله', paymentType: 'أقساط', date: '2024-04-20' },
     ],
 
     // تقارير الشؤون الإدارية
@@ -40,38 +40,38 @@ const getReportData = (reportName: string, sector: string) => {
       { id: 'EMP003', name: 'محمد عبدالله سعيد', department: 'تقنية المعلومات', attendance: '20/24', absences: '4', lateArrivals: '3', overtime: '12 ساعات', month: 'مايو 2024' },
     ],
     'الشؤون الإدارية-تقرير الرواتب': [
-      { id: 'SAL001', employee: 'أحمد محمد علي', position: 'محاسب أول', basicSalary: '1,200', allowances: '300', deductions: '150', netSalary: '1,350', month: 'مايو 2024' },
-      { id: 'SAL002', employee: 'فاطمة سالم أحمد', position: 'مسؤولة موارد بشرية', basicSalary: '1,500', allowances: '400', deductions: '200', netSalary: '1,700', month: 'مايو 2024' },
-      { id: 'SAL003', employee: 'محمد عبدالله سعيد', position: 'مطور نظم', basicSalary: '1,800', allowances: '500', deductions: '250', netSalary: '2,050', month: 'مايو 2024' },
+      { id: 'SAL001', employee: 'أحمد محمد علي', position: 'محاسب أول', basicSalary: '1,200 جنيه', allowances: '300 جنيه', deductions: '150 جنيه', netSalary: '1,350 جنيه', month: 'مايو 2024' },
+      { id: 'SAL002', employee: 'فاطمة سالم أحمد', position: 'مسؤولة موارد بشرية', basicSalary: '1,500 جنيه', allowances: '400 جنيه', deductions: '200 جنيه', netSalary: '1,700 جنيه', month: 'مايو 2024' },
+      { id: 'SAL003', employee: 'محمد عبدالله سعيد', position: 'مطور نظم', basicSalary: '1,800 جنيه', allowances: '500 جنيه', deductions: '250 جنيه', netSalary: '2,050 جنيه', month: 'مايو 2024' },
     ],
 
     // تقارير قطاع التعاون
     'قطاع التعاون-تقرير الجمعيات': [
-      { id: 'SOC001', name: 'جمعية الأندلس الفئوية', type: 'فئوية', region: 'الرياض', members: '85', activeProjects: '3', totalLands: '25 قطعة', status: 'نشطة' },
-      { id: 'SOC002', name: 'جمعية النور الإقليمية', type: 'إقليمية', region: 'جدة', members: '120', activeProjects: '2', totalLands: '40 قطعة', status: 'نشطة' },
-      { id: 'SOC003', name: 'جمعية الياسمين المختلطة', type: 'فئوية وإقليمية', region: 'الدمام', members: '65', activeProjects: '1', totalLands: '15 قطعة', status: 'معلقة' },
-      { id: 'SOC004', name: 'جمعية الورود الإقليمية', type: 'إقليمية', region: 'المدينة المنورة', members: '95', activeProjects: '4', totalLands: '30 قطعة', status: 'نشطة' },
+      { id: 'SOC001', name: 'جمعية الأندلس الفئوية', type: 'فئوية', region: 'القاهرة', members: '85', activeProjects: '3', totalLands: '25 قطعة', status: 'نشطة' },
+      { id: 'SOC002', name: 'جمعية النور الإقليمية', type: 'إقليمية', region: 'الجيزة', members: '120', activeProjects: '2', totalLands: '40 قطعة', status: 'نشطة' },
+      { id: 'SOC003', name: 'جمعية الياسمين المختلطة', type: 'فئوية وإقليمية', region: 'الإسكندرية', members: '65', activeProjects: '1', totalLands: '15 قطعة', status: 'معلقة' },
+      { id: 'SOC004', name: 'جمعية الورود الإقليمية', type: 'إقليمية', region: 'أسوان', members: '95', activeProjects: '4', totalLands: '30 قطعة', status: 'نشطة' },
     ],
 
     // تقارير القطاع المالي
     'القطاع المالي-تقرير التحصيلات': [
-      { id: 'COL001', source: 'مبيعات الوحدات', amount: '2,500,000', collectedAmount: '2,200,000', pendingAmount: '300,000', collectionRate: '88%', month: 'مايو 2024' },
-      { id: 'COL002', source: 'مبيعات الأراضي', amount: '1,800,000', collectedAmount: '1,650,000', pendingAmount: '150,000', collectionRate: '92%', month: 'مايو 2024' },
-      { id: 'COL003', source: 'رسوم الجمعيات', amount: '450,000', collectedAmount: '400,000', pendingAmount: '50,000', collectionRate: '89%', month: 'مايو 2024' },
+      { id: 'COL001', source: 'مبيعات الوحدات', amount: '2,500,000 جنيه', collectedAmount: '2,200,000 جنيه', pendingAmount: '300,000 جنيه', collectionRate: '88%', month: 'مايو 2024' },
+      { id: 'COL002', source: 'مبيعات الأراضي', amount: '1,800,000 جنيه', collectedAmount: '1,650,000 جنيه', pendingAmount: '150,000 جنيه', collectionRate: '92%', month: 'مايو 2024' },
+      { id: 'COL003', source: 'رسوم الجمعيات', amount: '450,000 جنيه', collectedAmount: '400,000 جنيه', pendingAmount: '50,000 جنيه', collectionRate: '89%', month: 'مايو 2024' },
     ],
 
     // تقارير القطاع القانوني
     'القطاع القانوني-تقرير القضايا': [
-      { id: 'LEG001', caseType: 'قضية تحصيل', party: 'أحمد محمد علي', amount: '50,000', status: 'قيد النظر', court: 'المحكمة التجارية', date: '2024-05-15' },
-      { id: 'LEG002', caseType: 'قضية مطالبة', party: 'مقاولات الخليج', amount: '120,000', status: 'محلولة', court: 'المحكمة العامة', date: '2024-04-10' },
-      { id: 'LEG003', caseType: 'قضية عقارية', party: 'شركة التطوير', amount: '200,000', status: 'قيد التنفيذ', court: 'المحكمة العقارية', date: '2024-05-20' },
+      { id: 'LEG001', caseType: 'قضية تحصيل', party: 'أحمد محمد علي', amount: '50,000 جنيه', status: 'قيد النظر', court: 'المحكمة التجارية', date: '2024-05-15' },
+      { id: 'LEG002', caseType: 'قضية مطالبة', party: 'مقاولات الخليج', amount: '120,000 جنيه', status: 'محلولة', court: 'المحكمة العامة', date: '2024-04-10' },
+      { id: 'LEG003', caseType: 'قضية عقارية', party: 'شركة التطوير', amount: '200,000 جنيه', status: 'قيد التنفيذ', court: 'المحكمة العقارية', date: '2024-05-20' },
     ],
 
     // تقارير قطاع المشروعات
     'قطاع المشروعات-تقرير حالة المشاريع': [
-      { id: 'PRJ001', name: 'مجمع الأندلس السكني', contractor: 'شركة البناء المتقدم', progress: '75%', budget: '5,000,000', spent: '3,750,000', status: 'قيد التنفيذ', expectedCompletion: '2024-12-31' },
-      { id: 'PRJ002', name: 'مجمع النور التجاري', contractor: 'مقاولات الخليج', progress: '45%', budget: '8,000,000', spent: '3,600,000', status: 'قيد التنفيذ', expectedCompletion: '2025-06-30' },
-      { id: 'PRJ003', name: 'مجمع الياسمين السكني', contractor: 'شركة التطوير العقاري', progress: '100%', budget: '3,500,000', spent: '3,400,000', status: 'مكتمل', expectedCompletion: '2024-04-30' },
+      { id: 'PRJ001', name: 'مجمع الأندلس السكني', contractor: 'شركة البناء المتقدم', progress: '75%', budget: '5,000,000 جنيه', spent: '3,750,000 جنيه', status: 'قيد التنفيذ', expectedCompletion: '2024-12-31' },
+      { id: 'PRJ002', name: 'مجمع النور التجاري', contractor: 'مقاولات الخليج', progress: '45%', budget: '8,000,000 جنيه', spent: '3,600,000 جنيه', status: 'قيد التنفيذ', expectedCompletion: '2025-06-30' },
+      { id: 'PRJ003', name: 'مجمع الياسمين السكني', contractor: 'شركة التطوير العقاري', progress: '100%', budget: '3,500,000 جنيه', spent: '3,400,000 جنيه', status: 'مكتمل', expectedCompletion: '2024-04-30' },
     ],
 
     // Default data
