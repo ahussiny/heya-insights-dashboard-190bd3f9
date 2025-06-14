@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -13,7 +12,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Handshake,
-  MapPin
+  MapPin,
+  UserCheck
 } from 'lucide-react';
 
 export const Sidebar = () => {
@@ -22,14 +22,15 @@ export const Sidebar = () => {
 
   const menuItems = [
     { icon: Home, label: 'الرئيسية', path: '/' },
-    { icon: FolderOpen, label: 'قطاع المشروعات', path: '/projects' },
-    { icon: Settings, label: 'قطاع التنفيذ', path: '/execution' },
-    { icon: Building, label: 'القطاع العقاري', path: '/real-estate' },
-    { icon: DollarSign, label: 'القطاع المالي', path: '/finance' },
+    { icon: FolderOpen, label: 'الإدارة المركزية للمشروعات والاقراض', path: '/projects' },
+    { icon: Settings, label: 'الإدارة المركزية لشئون التنفيذ', path: '/execution' },
+    { icon: Building, label: 'الإدارة المركزية للشئون العقارية', path: '/real-estate' },
+    { icon: DollarSign, label: 'الإدارة المركزية للشئون المالية', path: '/finance' },
     { icon: Users, label: 'الشئون الإدارية', path: '/admin' },
-    { icon: Scale, label: 'القطاع القانوني', path: '/legal' },
-    { icon: Handshake, label: 'قطاع التعاون', path: '/cooperation' },
+    { icon: Scale, label: 'الإدارة المركزية للإدارات القانونية', path: '/legal' },
+    { icon: Handshake, label: 'الإدارة المركزية لشئون التعاون', path: '/cooperation' },
     { icon: MapPin, label: 'أراضي الجمعيات', path: '/association-lands' },
+    { icon: UserCheck, label: 'الإدارة المركزية لشئون مكتب رئيس مجلس الإدارة', path: '/board-office' },
   ];
 
   return (

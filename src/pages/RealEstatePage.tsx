@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
 import { RealEstateReports } from '../components/reports/RealEstateReports';
@@ -9,7 +8,7 @@ export const RealEstatePage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">القطاع العقاري</h1>
+        <h1 className="text-3xl font-bold text-gray-900">الإدارة المركزية للشئون العقارية</h1>
         <p className="text-gray-600 mt-2">الإعلان والطرح والتخصيص للعملاء - الوحدات والأراضي</p>
       </div>
 
@@ -104,9 +103,9 @@ export const RealEstatePage = () => {
               </thead>
               <tbody>
                 {[
-                  { unit: 'A-101', project: 'مشروع الأندلس', client: 'أحمد محمد علي', price: '450,000 ريال' },
-                  { unit: 'B-205', project: 'مشروع النور', client: 'فاطمة أحمد', price: '380,000 ريال' },
-                  { unit: 'C-301', project: 'مشروع الياسمين', client: 'محمد سالم', price: '520,000 ريال' },
+                  { unit: 'A-101', project: 'مشروع الأندلس', client: 'أحمد محمد علي', price: '450,000 جنيه مصري' },
+                  { unit: 'B-205', project: 'مشروع النور', client: 'فاطمة أحمد', price: '380,000 جنيه مصري' },
+                  { unit: 'C-301', project: 'مشروع الياسمين', client: 'محمد سالم', price: '520,000 جنيه مصري' },
                 ].map((sale, index) => (
                   <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-3 px-4 font-medium">{sale.unit}</td>
@@ -134,9 +133,9 @@ export const RealEstatePage = () => {
               </thead>
               <tbody>
                 {[
-                  { plot: 'ق-001', area: '500 م²', client: 'شركة البناء المتطور', price: '250,000 ريال' },
-                  { plot: 'ق-002', area: '750 م²', client: 'مؤسسة الإعمار', price: '375,000 ريال' },
-                  { plot: 'ق-003', area: '420 م²', client: 'شركة الخليج للتطوير', price: '210,000 ريال' },
+                  { plot: 'ق-001', area: '500 م²', client: 'شركة البناء المتطور', price: '250,000 جنيه مصري' },
+                  { plot: 'ق-002', area: '750 م²', client: 'مؤسسة الإعمار', price: '375,000 جنيه مصري' },
+                  { plot: 'ق-003', area: '420 م²', client: 'شركة الخليج للتطوير', price: '210,000 جنيه مصري' },
                 ].map((land, index) => (
                   <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-3 px-4 font-medium">{land.plot}</td>

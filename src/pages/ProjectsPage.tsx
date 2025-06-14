@@ -8,7 +8,7 @@ export const ProjectsPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">قطاع المشروعات</h1>
+        <h1 className="text-3xl font-bold text-gray-900">الإدارة المركزية للمشروعات والاقراض</h1>
         <p className="text-gray-600 mt-2">تخطيط ودراسة المشاريع وعمل المقايسات</p>
       </div>
 
@@ -31,7 +31,7 @@ export const ProjectsPage = () => {
         />
         <StatCard
           title="ميزانية المشاريع"
-          value="45.2 مليون"
+          value="45.2 مليون جنيه"
           change="10%"
           changeType="increase"
           icon={TrendingUp}
@@ -66,10 +66,10 @@ export const ProjectsPage = () => {
             </thead>
             <tbody>
               {[
-                { name: 'مشروع الأندلس السكني', status: 'قيد التخطيط', budget: '15.5 مليون', date: '2024-01-15', progress: 75 },
-                { name: 'مشروع النور التجاري', status: 'مقايسة', budget: '22.3 مليون', date: '2024-02-01', progress: 45 },
-                { name: 'مشروع الياسمين', status: 'مكتمل', budget: '8.7 مليون', date: '2023-11-20', progress: 100 },
-                { name: 'مشروع الورود', status: 'قيد التخطيط', budget: '12.1 مليون', date: '2024-03-10', progress: 25 },
+                { name: 'مشروع الأندلس السكني', status: 'قيد التخطيط', budget: '15.5 مليون جنيه', date: '2024-01-15', progress: 75 },
+                { name: 'مشروع النور التجاري', status: 'مقايسة', budget: '22.3 مليون جنيه', date: '2024-02-01', progress: 45 },
+                { name: 'مشروع الياسمين', status: 'مكتمل', budget: '8.7 مليون جنيه', date: '2023-11-20', progress: 100 },
+                { name: 'مشروع الورود', status: 'قيد التخطيط', budget: '12.1 مليون جنيه', date: '2024-03-10', progress: 25 },
               ].map((project, index) => (
                 <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                   <td className="py-3 px-4">{project.name}</td>

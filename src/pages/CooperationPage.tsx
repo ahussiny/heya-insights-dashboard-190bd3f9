@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { StatCard } from '../components/StatCard';
 import { CooperationReports } from '../components/reports/CooperationReports';
@@ -9,7 +8,7 @@ export const CooperationPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">قطاع التعاون</h1>
+        <h1 className="text-3xl font-bold text-gray-900">الإدارة المركزية لشئون التعاون</h1>
         <p className="text-gray-600 mt-2">إدارة الجمعيات التعاونية والأعضاء والمشاريع والأراضي</p>
       </div>
 
@@ -40,7 +39,7 @@ export const CooperationPage = () => {
         />
         <StatCard
           title="إجمالي قيمة الأراضي"
-          value="85.2 مليون"
+          value="85.2 مليون جنيه مصري"
           change="20%"
           changeType="increase"
           icon={DollarSign}
@@ -116,10 +115,10 @@ export const CooperationPage = () => {
               </thead>
               <tbody>
                 {[
-                  { society: 'جمعية الأندلس', amount: '2.5 مليون', dueDate: '2024-06-15', status: 'مستحق' },
-                  { society: 'جمعية النور', amount: '1.8 مليون', dueDate: '2024-06-20', status: 'مدفوع' },
-                  { society: 'جمعية الياسمين', amount: '3.2 مليون', dueDate: '2024-05-30', status: 'متأخر' },
-                  { society: 'جمعية الورود', amount: '1.5 مليون', dueDate: '2024-07-01', status: 'مستحق' },
+                  { society: 'جمعية الأندلس', amount: '2.5 مليون جنيه مصري', dueDate: '2024-06-15', status: 'مستحق' },
+                  { society: 'جمعية النور', amount: '1.8 مليون جنيه مصري', dueDate: '2024-06-20', status: 'مدفوع' },
+                  { society: 'جمعية الياسمين', amount: '3.2 مليون جنيه مصري', dueDate: '2024-05-30', status: 'متأخر' },
+                  { society: 'جمعية الورود', amount: '1.5 مليون جنيه مصري', dueDate: '2024-07-01', status: 'مستحق' },
                 ].map((payment, index) => (
                   <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="py-3 px-4 font-medium">{payment.society}</td>

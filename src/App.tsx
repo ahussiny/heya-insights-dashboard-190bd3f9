@@ -17,6 +17,7 @@ import { AdminPage } from "./pages/AdminPage";
 import { LegalPage } from "./pages/LegalPage";
 import { CooperationPage } from "./pages/CooperationPage";
 import { AssociationLandsPage } from "./pages/AssociationLandsPage";
+import { BoardOfficePage } from "./pages/BoardOfficePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -96,6 +97,13 @@ const App = () => (
             <ProtectedRoute>
               <Layout>
                 <AssociationLandsPage />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/board-office" element={
+            <ProtectedRoute>
+              <Layout>
+                <BoardOfficePage />
               </Layout>
             </ProtectedRoute>
           } />

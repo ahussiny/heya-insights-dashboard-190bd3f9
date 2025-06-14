@@ -17,7 +17,7 @@ export const ExecutionReports = () => {
   const navigate = useNavigate();
 
   const handleReportClick = (reportName: string) => {
-    navigate(`/report?name=${encodeURIComponent(reportName)}&sector=${encodeURIComponent('قطاع التنفيذ')}`);
+    navigate(`/report?name=${encodeURIComponent(reportName)}&sector=${encodeURIComponent('الإدارة المركزية لشئون التنفيذ')}`);
   };
 
   return (
@@ -25,7 +25,7 @@ export const ExecutionReports = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <BarChart3 className="h-5 w-5" />
-          تقارير قطاع التنفيذ
+          تقارير الإدارة المركزية لشئون التنفيذ
         </CardTitle>
       </CardHeader>
       <CardContent>
