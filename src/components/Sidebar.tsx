@@ -13,7 +13,8 @@ import {
   ChevronRight,
   Handshake,
   MapPin,
-  UserCheck
+  UserCheck,
+  BookOpen
 } from 'lucide-react';
 
 export const Sidebar = () => {
@@ -22,6 +23,7 @@ export const Sidebar = () => {
 
   const menuItems = [
     { icon: Home, label: 'الرئيسية', path: '/' },
+    { icon: BookOpen, label: 'دليل النظام', path: '/documentation' },
     { icon: FolderOpen, label: 'الإدارة المركزية للمشروعات والاقراض', path: '/projects' },
     { icon: Settings, label: 'الإدارة المركزية لشئون التنفيذ', path: '/execution' },
     { icon: Building, label: 'الإدارة المركزية للشئون العقارية', path: '/real-estate' },

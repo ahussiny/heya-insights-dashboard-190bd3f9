@@ -18,6 +18,7 @@ import { LegalPage } from "./pages/LegalPage";
 import { CooperationPage } from "./pages/CooperationPage";
 import { AssociationLandsPage } from "./pages/AssociationLandsPage";
 import { BoardOfficePage } from "./pages/BoardOfficePage";
+import { AppDocumentationPage } from "./pages/AppDocumentationPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,13 @@ const App = () => (
             <ProtectedRoute>
               <Layout>
                 <Dashboard />
+              </Layout>
+            </ProtectedRoute>
+          } />
+          <Route path="/documentation" element={
+            <ProtectedRoute>
+              <Layout>
+                <AppDocumentationPage />
               </Layout>
             </ProtectedRoute>
           } />
