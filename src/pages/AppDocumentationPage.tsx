@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import html2pdf from 'html2pdf.js';
 import { 
   Home, 
   FolderOpen, 
@@ -21,6 +22,21 @@ import {
 } from 'lucide-react';
 
 export const AppDocumentationPage = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const downloadPDF = () => {
+    if (contentRef.current) {
+      const opt = {
+        margin: 1,
+        filename: 'دليل-نظام-ERP-الشامل.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      
+      html2pdf().set(opt).from(contentRef.current).save();
+    }
+  };
   const sections = [
     {
       title: "لوحة التحكم الرئيسية",
@@ -215,13 +231,7 @@ export const AppDocumentationPage = () => {
         {/* زر تحميل دليل النظام PDF */}
         <div className="mt-6">
           <Button 
-            onClick={() => {
-              // إنشاء رابط تحميل وهمي - يمكن استبداله برابط حقيقي
-              const link = document.createElement('a');
-              link.href = '#'; // يمكن استبداله برابط PDF حقيقي
-              link.download = 'دليل-نظام-ERP-الشامل.pdf';
-              link.click();
-            }}
+            onClick={downloadPDF}
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 mx-auto"
           >
             <Download className="h-5 w-5" />
@@ -230,6 +240,8 @@ export const AppDocumentationPage = () => {
           <p className="text-sm text-gray-500 mt-2">دليل شامل يحتوي على جميع تفاصيل النظام وطريقة الاستخدام</p>
         </div>
       </div>
+
+      <div ref={contentRef}>
 
       {/* نظرة عامة على النظام */}
       <Card className="mb-8">
@@ -404,6 +416,7 @@ export const AppDocumentationPage = () => {
           </div>
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 };
