@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { 
   Home, 
   FolderOpen, 
@@ -15,7 +16,8 @@ import {
   BarChart3, 
   Calendar, 
   AlertTriangle, 
-  CheckCircle 
+  CheckCircle,
+  Download 
 } from 'lucide-react';
 
 export const AppDocumentationPage = () => {
@@ -209,6 +211,24 @@ export const AppDocumentationPage = () => {
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">دليل نظام ERP الشامل</h1>
         <p className="text-xl text-gray-600">شرح تفصيلي لجميع محتويات وشاشات النظام</p>
+        
+        {/* زر تحميل دليل النظام PDF */}
+        <div className="mt-6">
+          <Button 
+            onClick={() => {
+              // إنشاء رابط تحميل وهمي - يمكن استبداله برابط حقيقي
+              const link = document.createElement('a');
+              link.href = '#'; // يمكن استبداله برابط PDF حقيقي
+              link.download = 'دليل-نظام-ERP-الشامل.pdf';
+              link.click();
+            }}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 mx-auto"
+          >
+            <Download className="h-5 w-5" />
+            تحميل دليل النظام (PDF)
+          </Button>
+          <p className="text-sm text-gray-500 mt-2">دليل شامل يحتوي على جميع تفاصيل النظام وطريقة الاستخدام</p>
+        </div>
       </div>
 
       {/* نظرة عامة على النظام */}
